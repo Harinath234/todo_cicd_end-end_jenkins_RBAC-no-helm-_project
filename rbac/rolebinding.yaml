@@ -9,5 +9,5 @@ roleRef:
   name: app-role 
 subjects:
 - kind: ServiceAccount
-  name: jenkins 
+  name: ansible-sa 
   namespace: todons 
