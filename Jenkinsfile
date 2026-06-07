@@ -42,8 +42,7 @@ pipeline {
         ]) {
             sh """
             echo "Updating deployment.yaml..."
-
-            sed -i 's|image:.*|image: ${IMAGE_NAME}:${IMAGE_TAG}|g' k8s/deployment.yaml
+            sed -i 's|image:.*|image: ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}|g' Kubernetes/deployment.yaml
 
             cat k8s/deployment.yaml
 
